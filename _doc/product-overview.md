@@ -45,6 +45,8 @@ is measured by.
   five minutes of every visit brilliantly.
 - **Tone**: clear, trustworthy, calm, healthcare-appropriate. Reassuring to patients,
   efficient and low-friction for staff. Privacy-respecting language throughout.
+- **Name & branding**: **IntakeFlow**. Calm, trustworthy, medical-friendly identity —
+  soft blue/teal palette, clean modern flat logo, warm rather than clinical-cold.
 
 ## Scope
 
