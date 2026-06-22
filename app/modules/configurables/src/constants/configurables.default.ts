@@ -59,72 +59,116 @@ export type TFont = {
   textFont: string;
 };
 
+export type TExpectItem = {
+  icon: string;
+  title: string;
+  description: string;
+};
+
 export type TDefaultConfigurableData = {
   appName: string;
   logoUrl: string;
   brandColor: TBrandColor;
   font: TFont;
-  // Mirror new schema fields here. Example:
-  //   maxItemsPerPage?: number;
-  //   enableNotifications?: boolean;
-  //   featuredCategories?: string[];
+  // Landing page content
+  tagline?: string;
+  heroHeadline?: string;
+  heroSubtext?: string;
+  primaryCtaLabel?: string;
+  ctaHelperText?: string;
+  expectSectionTitle?: string;
+  expectItems?: TExpectItem[];
+  footerText?: string;
 };
 
 export const defaultConfigurablesData: TDefaultConfigurableData = {
-  appName: "My App",
+  appName: "IntakeFlow",
   logoUrl: "",
   brandColor: {
-    // Base
-    background:        "#ffffff",
-    foreground:        "#09090b",
-    // Card
+    // Base — soft off-white surface, deep slate text
+    background:        "#f6fbfb",
+    foreground:        "#0f172a",
+    // Card — clean white cards on the soft surface
     card:              "#ffffff",
-    cardForeground:    "#09090b",
+    cardForeground:    "#0f172a",
     // Popover
     popover:           "#ffffff",
-    popoverForeground: "#09090b",
-    // Primary
-    primary:           "#2563eb",
+    popoverForeground: "#0f172a",
+    // Primary — calm teal
+    primary:           "#0d9488",
     primaryForeground: "#ffffff",
-    // Secondary
-    secondary:           "#f4f4f5",
-    secondaryForeground: "#18181b",
-    // Muted
-    muted:           "#f4f4f5",
-    mutedForeground: "#71717a",
-    // Accent
-    accent:           "#f4f4f5",
-    accentForeground: "#18181b",
+    // Secondary — soft teal tint
+    secondary:           "#e6f7f5",
+    secondaryForeground: "#0f766e",
+    // Muted — quiet slate
+    muted:           "#eef2f5",
+    mutedForeground: "#64748b",
+    // Accent — soft teal accent
+    accent:           "#ccf3ee",
+    accentForeground: "#0f766e",
     // Destructive
     destructive:           "#ef4444",
-    destructiveForeground: "#fafafa",
+    destructiveForeground: "#ffffff",
     // Border / Input / Ring
-    border: "#e4e4e7",
-    input:  "#e4e4e7",
-    ring:   "#2563eb",
+    border: "#e2e8f0",
+    input:  "#e2e8f0",
+    ring:   "#0d9488",
     // Charts
-    chart1: "#f97316",
-    chart2: "#0d9488",
-    chart3: "#1e3a5f",
-    chart4: "#d4a017",
-    chart5: "#ea580c",
+    chart1: "#0d9488",
+    chart2: "#14b8a6",
+    chart3: "#0f766e",
+    chart4: "#5eead4",
+    chart5: "#0e7490",
     // Navbar
     navbarBackground: "#ffffff",
     // Sidebar
-    sidebarBackground:        "#fafafa",
-    sidebarForeground:        "#3f3f46",
-    sidebarPrimary:           "#2563eb",
+    sidebarBackground:        "#ffffff",
+    sidebarForeground:        "#0f172a",
+    sidebarPrimary:           "#0d9488",
     sidebarPrimaryForeground: "#ffffff",
-    sidebarAccent:            "#f4f4f5",
-    sidebarAccentForeground:  "#18181b",
-    sidebarBorder:            "#e4e4e7",
-    sidebarRing:              "#2563eb",
+    sidebarAccent:            "#e6f7f5",
+    sidebarAccentForeground:  "#0f766e",
+    sidebarBorder:            "#e2e8f0",
+    sidebarRing:              "#0d9488",
   },
   font: {
     headingFont: "Plus Jakarta Sans",
     textFont: "Inter",
   },
-  // ─────────────────────────────────────────────────────────────────────
-  // Add new field defaults here. See RULES.md §5 for per-type shape.
-  // ─────────────────────────────────────────────────────────────────────
+  // ── Landing page content ──────────────────────────────────────────────
+  tagline: "The calm, no-paperwork front desk.",
+  heroHeadline: "Welcome — let's get you checked in.",
+  heroSubtext:
+    "Complete your intake from your own phone before you arrive. No clipboard, no callbacks — just a calm few minutes, and you're set.",
+  primaryCtaLabel: "Begin intake",
+  ctaHelperText: "Takes about 2 minutes · Your details stay private",
+  expectSectionTitle: "What to expect",
+  expectItems: [
+    {
+      icon: "clock",
+      title: "A couple of minutes",
+      description:
+        "A short, simple form. Just your details and the reason for your visit — nothing more.",
+    },
+    {
+      icon: "phone",
+      title: "From your own phone",
+      description:
+        "Fill it in wherever you are, before you arrive. No app to download, no paperwork at the desk.",
+    },
+    {
+      icon: "shield",
+      title: "Your details stay private",
+      description:
+        "Your information is handled with care and shared only with your care team.",
+    },
+    {
+      icon: "message",
+      title: "A confirmation when it's received",
+      description:
+        "Once you're done, you'll get a confirmation so you know the clinic has you. Nothing left to chase.",
+    },
+  ],
+  footerText:
+    "Your privacy matters. Information you share is used only to prepare for your visit.",
 };

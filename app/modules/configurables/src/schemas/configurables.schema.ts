@@ -45,6 +45,71 @@ export const configurableSchemas: ConfigurableSchemas = {
       required: true,
       label: "Logo URL",
     },
+
+    // ── Landing page content ────────────────────────────────────────────────
+    {
+      fieldName: "tagline",
+      type: "string",
+      required: false,
+      label: "Tagline",
+      maxLength: 120,
+    },
+    {
+      fieldName: "heroHeadline",
+      type: "string",
+      required: false,
+      label: "Hero Headline",
+      maxLength: 120,
+    },
+    {
+      fieldName: "heroSubtext",
+      type: "string",
+      required: false,
+      label: "Hero Subtext",
+      maxLength: 280,
+    },
+    {
+      fieldName: "primaryCtaLabel",
+      type: "string",
+      required: false,
+      label: "Primary Button Label",
+      maxLength: 40,
+    },
+    {
+      fieldName: "ctaHelperText",
+      type: "string",
+      required: false,
+      label: "CTA Helper Text",
+      maxLength: 120,
+    },
+    {
+      fieldName: "expectSectionTitle",
+      type: "string",
+      required: false,
+      label: "What To Expect — Section Title",
+      maxLength: 80,
+    },
+    {
+      fieldName: "expectItems",
+      type: "array",
+      required: false,
+      label: "What To Expect — Items",
+      item: {
+        type: "object",
+        fields: [
+          { fieldName: "icon", type: "enum", required: true, label: "Icon", options: ["clock", "phone", "shield", "message"] },
+          { fieldName: "title", type: "string", required: true, label: "Title" },
+          { fieldName: "description", type: "string", required: true, label: "Description" },
+        ],
+      },
+    },
+    {
+      fieldName: "footerText",
+      type: "string",
+      required: false,
+      label: "Footer Text",
+      maxLength: 200,
+    },
     {
       fieldName: "brandColor",
       type: "object",
