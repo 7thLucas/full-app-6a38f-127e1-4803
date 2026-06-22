@@ -1,0 +1,42 @@
+<style>
+  .mode-landscape .sl-cover { flex-direction: row; align-items: stretch; }
+  .mode-portrait .sl-cover { flex-direction: column; }
+  .mode-portrait .sl-visual { min-height: 38%; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-cover flex w-full h-full">
+    <!-- Left: editorial headline -->
+    <div class="flex flex-col justify-between p-12 flex-1">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-teal-600"></span>
+        <span class="text-xs font-semibold tracking-[0.2em] uppercase text-teal-700">Clinic Intake Flow</span>
+      </div>
+
+      <div class="max-w-xl">
+        <p class="text-sm font-semibold tracking-widest uppercase text-slate-400 mb-4">For small clinics</p>
+        <h1 class="text-5xl font-bold leading-[1.05] text-slate-900">
+          The calm, no-paperwork
+          <span class="text-teal-700">front desk.</span>
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-slate-600 max-w-md">
+          Patients fill intake from their phone. Staff work one live queue. Everyone gets an SMS confirmation — no clipboard, no callbacks.
+        </p>
+      </div>
+
+      <div class="flex items-end justify-between">
+        <data-attribution />
+        <span class="text-xs text-slate-400">Product Blueprint</span>
+      </div>
+    </div>
+
+    <!-- Right: visual anchor -->
+    <div class="sl-visual relative flex-1 overflow-hidden">
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=calm%20modern%20small%20clinic%20reception%20waiting%20area%2C%20soft%20natural%20light%2C%20a%20patient%20using%20a%20phone%2C%20teal%20and%20warm%20neutral%20palette%2C%20editorial%20healthcare%20photography"
+        alt="A calm clinic reception"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-teal-900/30 to-transparent"></div>
+    </div>
+  </div>
+</section>
