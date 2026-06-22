@@ -79,6 +79,5 @@ is measured by.
 
 ## Provisional / to confirm
 
-- Final product name and branding `(TBD)`.
 - Clinic size — number of front-desk/clinical staff and weekly patient volume `(TBD)`;
   needed to project Weekly Verified Operations and ROI.
