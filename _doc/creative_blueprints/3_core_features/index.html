@@ -1,0 +1,46 @@
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col w-full h-full p-12">
+    <span class="text-xs font-semibold tracking-[0.2em] uppercase text-teal-700 mb-3">Core Features</span>
+    <h2 class="text-3xl font-bold text-slate-900 mb-6">What each person does</h2>
+
+    <!-- Persona chips -->
+    <div class="flex flex-wrap gap-3 mb-8">
+      <span class="px-4 py-1.5 rounded-full bg-teal-700 text-white text-sm font-semibold">Patient</span>
+      <span class="px-4 py-1.5 rounded-full bg-slate-100 text-slate-600 text-sm font-semibold">Front-desk staff</span>
+      <span class="px-4 py-1.5 rounded-full bg-slate-100 text-slate-600 text-sm font-semibold">Clinic operator</span>
+    </div>
+
+    <!-- Feature grid (active persona: Patient + the shared flow) -->
+    <div class="grid grid-cols-3 gap-5 flex-1 mode-portrait:grid-cols-1">
+      <div class="rounded-2xl border border-slate-200 p-6 flex flex-col">
+        <div class="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center mb-4">
+          <span class="text-teal-700 text-lg font-bold">1</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Phone-first intake form</h3>
+        <p class="text-sm leading-relaxed text-slate-600">
+          Patients submit their details and reason for visit from their own device, before they ever reach the desk. Fast, obvious, few taps.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-slate-200 p-6 flex flex-col">
+        <div class="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center mb-4">
+          <span class="text-teal-700 text-lg font-bold">2</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Live staff queue</h3>
+        <p class="text-sm leading-relaxed text-slate-600">
+          Every submission lands in one ordered queue. Staff see who's waiting, pick up, work, and clear each patient — no paper, no re-keying.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-slate-200 p-6 flex flex-col">
+        <div class="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center mb-4">
+          <span class="text-teal-700 text-lg font-bold">3</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Automatic SMS confirmation</h3>
+        <p class="text-sm leading-relaxed text-slate-600">
+          The moment intake is received, the patient gets a text confirming the clinic has them — quiet reassurance that cuts no-shows.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
