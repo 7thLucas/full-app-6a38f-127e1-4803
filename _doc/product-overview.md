@@ -50,12 +50,17 @@ is measured by.
 
 ## Scope
 
-**In scope (v1)**
-- Patient-facing intake form (own device, pre-arrival).
+**In scope (v1) — the build now**
+- Patient-facing **landing page**: a calm, mobile-first front door that explains the
+  clinic and lets a patient tap one button to begin intake. This is the first slice we
+  ship.
+
+**Planned next (roadmap — grounded in the core jobs above)**
+- Patient-facing intake form (own device, pre-arrival) — the front door leads straight here.
 - Staff queue view of submitted intakes (ordered, workable, clearable).
 - Automatic SMS confirmation to the patient on submission.
 
-**Out of scope (v1) — unless later confirmed**
+**Out of scope — unless later confirmed**
 - Full EHR / clinical charting and records management.
 - Appointment scheduling / calendar booking.
 - Billing, insurance, or payments.
