@@ -1,7 +1,7 @@
-# Product Overview — Clinic Intake Flow (working name)
+# Product Overview — IntakeFlow
 
-> Single source of truth for the product. Some facts below are **provisional** and
-> marked `(TBD)` until confirmed during scoping (final name, branding, clinic volume).
+> Single source of truth for the product. The product name (**IntakeFlow**) and branding
+> are confirmed; clinic volume remains **provisional** and marked `(TBD)` until set.
 
 ## What it is
 
