@@ -1,0 +1,38 @@
+<style>
+  .mode-landscape .sl-found { flex-direction: row; }
+  .mode-portrait .sl-found { flex-direction: column; }
+  .mode-portrait .sl-found-visual { min-height: 30%; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-found flex w-full h-full">
+    <!-- Narrative zones -->
+    <div class="flex-1 flex flex-col justify-center p-12 gap-8">
+      <span class="text-xs font-semibold tracking-[0.2em] uppercase text-teal-700">The Foundation</span>
+
+      <div class="grid grid-cols-1 gap-6">
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <h2 class="text-xl font-bold text-slate-900 mb-2">The Problem</h2>
+          <p class="text-base leading-relaxed text-slate-600">
+            Small clinics run their front desk on paper and phone tag. Patients fill clipboards on arrival, staff re-key the same details, and confirmation calls eat hours every week — while the waiting room backs up and no-shows slip through.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-teal-700 p-6">
+          <h2 class="text-xl font-bold text-white mb-2">The Solution</h2>
+          <p class="text-base leading-relaxed text-teal-50">
+            One shared flow. Patients submit intake from their own phone before they arrive, staff work a single live queue instead of a paper stack, and every submission fires an automatic SMS confirmation — closing the clipboard-and-callback loop.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Supporting visual -->
+    <div class="sl-found-visual relative flex-1 overflow-hidden">
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=clinic%20front%20desk%20staff%20member%20looking%20at%20a%20clean%20digital%20queue%20on%20a%20tablet%2C%20organized%20calm%20workspace%2C%20teal%20accents%2C%20soft%20daylight%2C%20editorial%20healthcare%20photography"
+        alt="Staff working a digital queue"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+    </div>
+  </div>
+</section>
