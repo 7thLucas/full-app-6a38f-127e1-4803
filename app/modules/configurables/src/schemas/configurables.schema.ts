@@ -110,6 +110,79 @@ export const configurableSchemas: ConfigurableSchemas = {
       label: "Footer Text",
       maxLength: 200,
     },
+
+    // ── Intake form ─────────────────────────────────────────────────────────
+    {
+      fieldName: "intakeHeading",
+      type: "string",
+      required: false,
+      label: "Intake — Heading",
+      maxLength: 120,
+    },
+    {
+      fieldName: "intakeSubtext",
+      type: "string",
+      required: false,
+      label: "Intake — Subtext",
+      maxLength: 280,
+    },
+    {
+      fieldName: "intakeSubmitLabel",
+      type: "string",
+      required: false,
+      label: "Intake — Submit Button Label",
+      maxLength: 40,
+    },
+    {
+      fieldName: "visitReasons",
+      type: "array",
+      required: false,
+      label: "Intake — Reasons for Visit",
+      item: {
+        type: "object",
+        fields: [
+          { fieldName: "label", type: "string", required: true, label: "Reason" },
+        ],
+      },
+    },
+    {
+      fieldName: "successTitle",
+      type: "string",
+      required: false,
+      label: "Intake — Success Title",
+      maxLength: 80,
+    },
+    {
+      fieldName: "successMessage",
+      type: "string",
+      required: false,
+      label: "Intake — Success Message",
+      maxLength: 280,
+    },
+    {
+      fieldName: "smsConfirmationTemplate",
+      type: "string",
+      required: false,
+      label: "SMS Confirmation Template ({name}, {clinic}, {reference})",
+      maxLength: 320,
+    },
+
+    // ── Staff queue ─────────────────────────────────────────────────────────
+    {
+      fieldName: "staffQueueTitle",
+      type: "string",
+      required: false,
+      label: "Staff Queue — Title",
+      maxLength: 80,
+    },
+    {
+      fieldName: "queueRefreshSeconds",
+      type: "number",
+      required: false,
+      label: "Staff Queue — Auto-refresh (seconds)",
+      min: 5,
+      max: 300,
+    },
     {
       fieldName: "brandColor",
       type: "object",

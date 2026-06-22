@@ -3,6 +3,7 @@ import { readdir } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 import { Router } from "express";
 import { createLogger } from "~/lib/logger";
+import intakeRoutes from "~/api/intake/intake.routes";
 
 type RouteModule = {
   default?: ReturnType<typeof Router>;
@@ -61,5 +62,10 @@ async function registerModuleRoutes(): Promise<void> {
 }
 
 await registerModuleRoutes();
+
+// Manually-registered API routes living outside app/modules/* (module folders
+// must be created by the scaffold, so feature APIs that need a brand-new area
+// live under app/api/* and are wired in here).
+router.use(intakeRoutes);
 
 export default router;

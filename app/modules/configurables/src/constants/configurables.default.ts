@@ -65,6 +65,10 @@ export type TExpectItem = {
   description: string;
 };
 
+export type TVisitReason = {
+  label: string;
+};
+
 export type TDefaultConfigurableData = {
   appName: string;
   logoUrl: string;
@@ -79,6 +83,18 @@ export type TDefaultConfigurableData = {
   expectSectionTitle?: string;
   expectItems?: TExpectItem[];
   footerText?: string;
+  // Intake form
+  intakeHeading?: string;
+  intakeSubtext?: string;
+  intakeSubmitLabel?: string;
+  visitReasons?: TVisitReason[];
+  successTitle?: string;
+  successMessage?: string;
+  // SMS confirmation — supports {name}, {clinic}, {reference} placeholders
+  smsConfirmationTemplate?: string;
+  // Staff queue
+  staffQueueTitle?: string;
+  queueRefreshSeconds?: number;
 };
 
 export const defaultConfigurablesData: TDefaultConfigurableData = {
@@ -171,4 +187,26 @@ export const defaultConfigurablesData: TDefaultConfigurableData = {
   ],
   footerText:
     "Your privacy matters. Information you share is used only to prepare for your visit.",
+  // ── Intake form ───────────────────────────────────────────────────────
+  intakeHeading: "Tell us a little about your visit",
+  intakeSubtext:
+    "A few quick details so your care team is ready for you. It takes about two minutes.",
+  intakeSubmitLabel: "Submit & check in",
+  visitReasons: [
+    { label: "New patient consultation" },
+    { label: "Follow-up appointment" },
+    { label: "General check-up" },
+    { label: "Prescription renewal" },
+    { label: "Vaccination" },
+    { label: "Something else" },
+  ],
+  successTitle: "You're checked in.",
+  successMessage:
+    "Thanks — the clinic has your details and will see you shortly. We've sent a confirmation to your phone.",
+  // SMS confirmation — {name}, {clinic}, {reference} are replaced at send time
+  smsConfirmationTemplate:
+    "Hi {name}, your check-in at {clinic} is confirmed. Reference: {reference}. Please take a seat — we'll call you shortly.",
+  // ── Staff queue ───────────────────────────────────────────────────────
+  staffQueueTitle: "Patient intake queue",
+  queueRefreshSeconds: 15,
 };

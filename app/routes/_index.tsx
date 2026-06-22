@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import { useConfigurables } from "~/modules/configurables";
 import type { TExpectItem } from "~/modules/configurables/src/constants/configurables.default";
 import { BrandMark } from "~/components/landing/brand-mark";
@@ -18,6 +19,8 @@ export function meta() {
 
 export default function IndexPage() {
   const { config, loading } = useConfigurables();
+  const navigate = useNavigate();
+  const beginIntake = () => navigate("/intake");
 
   // Avoid SSR/CSR hydration mismatch: render a calm skeleton until config loads.
   if (loading) {
@@ -80,6 +83,7 @@ export default function IndexPage() {
           <BeginIntakeCTA
             label={primaryCtaLabel}
             helperText={ctaHelperText}
+            onBegin={beginIntake}
             className="mt-9"
           />
         </section>
@@ -132,7 +136,7 @@ export default function IndexPage() {
             <p className="max-w-md text-pretty text-lg font-medium leading-relaxed text-card-foreground">
               Ready when you are. It only takes a couple of calm minutes.
             </p>
-            <BeginIntakeCTA label={primaryCtaLabel} />
+            <BeginIntakeCTA label={primaryCtaLabel} onBegin={beginIntake} />
           </div>
         </section>
       </main>
